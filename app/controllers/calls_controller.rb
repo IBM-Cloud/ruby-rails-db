@@ -2,15 +2,8 @@ class CallsController < ApplicationController
   # GET /calls
   # GET /calls.json
   def index
+    redirect_to '/calls/new'
     @calls = Call.all
-    if !session[:twilio_sid] || !session[:twilio_secret] || !session[:twilio_from_number]
-      redirect_to '/configs/new'
-    else
-      respond_to do |format|
-        format.html # index.html.erb
-        format.json { render json: @calls }
-      end
-    end
   end
 
   # GET /calls/1
@@ -30,10 +23,16 @@ class CallsController < ApplicationController
     @call = Call.new
     @contacts = Contact.all
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @call }
+    if !session[:twilio_sid] || !session[:twilio_secret] || !session[:twilio_from_number]
+      redirect_to '/configs/new'
+    else
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @call }
+      end
     end
+
+
   end
 
   # GET /calls/1/edit
@@ -53,7 +52,7 @@ class CallsController < ApplicationController
         twilio.calls.create(
             :from => session[:twilio_from_number],
             :to => num,
-            :url => 'http://bluemix-rails32.mybluemix.net/bridge/index.xml'
+            :url => "http://#{request.host_with_port}/bridge/index.xml"
         )
       end
         respond_to do |format|
@@ -64,19 +63,6 @@ class CallsController < ApplicationController
           format.html {redirect_to '/calls', error: 'Call was succesfully created.'}
         end
     end
-
-
-    #@call = Call.new(params[:call])
-
-    #respond_to do |format|
-      #if @call.save
-      #  format.html { redirect_to @call, notice: 'Call was successfully created.' }
-      #  format.json { render json: @call, status: :created, location: @call }
-      #else
-      #  format.html { render action: "new" }
-        #format.json { render json: @call.errors, status: :unprocessable_entity }
-      #end
-    #end
   end
 
   # PUT /calls/1
