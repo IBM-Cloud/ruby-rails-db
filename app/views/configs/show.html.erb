@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Twilio sid:</b>
+  <%= @config.twilio_sid %>
+</p>
+
+<p>
+  <b>Twilio secret:</b>
+  <%= @config.twilio_secret %>
+</p>
+
+<p>
+  <b>Twilio from number:</b>
+  <%= @config.twilio_from_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_config_path(@config) %> |
+<%= link_to 'Back', configs_path %>

@@ -1,0 +1,27 @@
+<h1>Listing configs</h1>
+
+<table>
+  <tr>
+    <th>Twilio sid</th>
+    <th>Twilio secret</th>
+    <th>Twilio from number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @configs.each do |config| %>
+  <tr>
+    <td><%= config.twilio_sid %></td>
+    <td><%= config.twilio_secret %></td>
+    <td><%= config.twilio_from_number %></td>
+    <td><%= link_to 'Show', config %></td>
+    <td><%= link_to 'Edit', edit_config_path(config) %></td>
+    <td><%= link_to 'Destroy', config, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Config', new_config_path %>
