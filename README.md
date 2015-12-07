@@ -1,4 +1,4 @@
-## Bluemix PHP Demo App: CodeIgniter
+## Bluemix Rails 3.2 Demo App
 
 This is an example application which can be run on Bluemix using the Rails 3.2
 
@@ -50,8 +50,4 @@ Previously with this example, it was necessary to create the database manually. 
 The migration scripts use the technique described [here](http://zacharyflower.com/2013/08/12/getting-started-with-codeigniter-migrations/).
 
 
-
-[CodeIgniter Tutorial]:http://ellislab.com/codeigniter/user-guide/tutorial/index.html
-[PHP Build Pack]:https://github.com/cloudfoundry/php-buildpack.git
-[PHPMyAdmin]:https://github.com/dmikusa-pivotal/cf-ex-phpmyadmin
 [MySQL client]:http://dev.mysql.com/doc/refman/5.6/en/mysql.html
