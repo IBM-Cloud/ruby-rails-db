@@ -1,4 +1,4 @@
-## Bluemix Rails 3.2 Demo App
+## Bluemix Ruby on Rails 3.2 Sample
 
 This is an example application which can be run on Bluemix using the Rails 3.2
 
@@ -15,8 +15,8 @@ This demonstration illustrates an application leveraging the Twilio API on IBM B
 1. Clone the app (i.e. this repo)
 
   ```
-  git clone https://github.com/IBM-Bluemix/bluemix-rails-3.2.git
-  cd bluemix-rails-3.2
+  git clone https://github.com/IBM-Bluemix/ruby-rails-db.git
+  cd ruby-rails-db
   ```
 
 1. If you don't have one already, create a MySQL service.  With Bluemix, the following command will create a free MySQL databse.
