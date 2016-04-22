@@ -47,7 +47,7 @@ Previously with this example, it was necessary to create the database manually. 
 1. The db migration scripts execute.
 1. The app itself starts.
 
-The migration scripts use the technique described [here](http://zacharyflower.com/2013/08/12/getting-started-with-codeigniter-migrations/).
+The migration scripts use the technique described [here](https://web.archive.org/web/20150918123438/http://zacharyflower.com/2013/08/12/getting-started-with-codeigniter-migrations).
 
 
 [MySQL client]:http://dev.mysql.com/doc/refman/5.6/en/mysql.html
